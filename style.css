@@ -1,0 +1,386 @@
+@charset "UTF-8";
+body {
+  padding: 0;
+  margin: 0;
+  background: #eaeaea;
+}
+
+@font-face {
+  font-family: "fuga";
+  src: url("fonts/TA_fuga_fude_03_m.otf");
+  font-weight: bold;
+}
+
+.heroImage {
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10vh 10vh 10vh 10vh 20vh 20vh 20vh;
+      grid-template-rows: 10vh 10vh 10vh 10vh 20vh 20vh 20vh;
+  -ms-grid-columns: 40vw 10vw 10vw 35vw 5vw;
+      grid-template-columns: 40vw 10vw 10vw 35vw 5vw;
+}
+
+.heroImage__header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+  background-color: #133f5f;
+}
+
+.heroImage__titlePart {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  grid-row: 2/6;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  background-color: #fff;
+  font-family: "fuga", serif;
+  font-weight: bold;
+  position: relative;
+}
+
+.heroImage__titlePart__title, .heroImage__titlePart__subtitle {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  margin: 0;
+}
+
+.heroImage__titlePart__title {
+  font-size: 3rem;
+  position: absolute;
+  right: 5rem;
+  top: 2rem;
+}
+
+.heroImage__titlePart__subtitle {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.heroImage__snsPart {
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 2;
+  grid-row: 6/8;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4/6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heroImage__snsPart__inner {
+  width: 80%;
+  height: 90%;
+  background-color: #274a78;
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heroImage__snsPart__inner__line i, .heroImage__snsPart__inner__twitter i, .heroImage__snsPart__inner__map i {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.heroImage__pictureWrapper {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 4;
+  grid-row: 3/7;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+  z-index: 100;
+}
+
+.heroImage__pictureWrapper__picture {
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.heroImage__pictureWrapper__picture:nth-child(1) {
+  background-image: url("images/heroImage1.jpg");
+}
+
+.heroImage__pictureWrapper__picture:nth-child(2) {
+  background-image: url("images/heroImage2.jpg");
+}
+
+.heroImage__captionWrapper {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 4;
+  grid-row: 4/8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.heroImage__captionWrapper__titlePart {
+  position: relative;
+  font-family: "fuga", serif;
+  height: 70%;
+}
+
+.heroImage__captionWrapper__titlePart__title, .heroImage__captionWrapper__titlePart__subtitle {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  margin: 0;
+}
+
+.heroImage__captionWrapper__titlePart__title {
+  font-size: 2.5rem;
+  position: absolute;
+  left: 3rem;
+  top: 2rem;
+}
+
+.heroImage__captionWrapper__titlePart__subtitle {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 10rem;
+  top: 2rem;
+}
+
+.heroImage__captionWrapper__caption {
+  height: 30%;
+  width: 70%;
+  margin: auto;
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+
+.concept {
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1.5fr 0.5fr;
+      grid-template-columns: 1fr 1fr 1fr 1.5fr 0.5fr;
+}
+
+.concept__picture {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.concept__picture::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.3);
+}
+
+.concept__picture:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  background-image: url("images/concept1.jpg");
+}
+
+.concept__picture:nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2/4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  background-image: url("images/concept2.jpg");
+}
+
+.concept__picture:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  background-image: url("images/concept3.jpg");
+}
+
+.concept__picture:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  background-image: url("images/concept4.jpg");
+}
+
+.concept__picture:nth-child(5) {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  background-image: url("images/concept5.jpg");
+}
+
+.concept__picture:nth-child(6) {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5/6;
+  background-image: url("images/concept6.jpg");
+  -webkit-transform: translate(-50px);
+          transform: translate(-50px);
+}
+
+.concept__mainCaptionPart__titlePart {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1/4;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+
+.concept__mainCaptionPart__titlePart__title, .concept__mainCaptionPart__titlePart__subtitle {
+  font-family: "fuga", serif;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  margin: 0;
+}
+
+.concept__mainCaptionPart__titlePart__title {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 3rem;
+}
+
+.concept__mainCaptionPart__titlePart__subtitle {
+  position: absolute;
+  top: 1rem;
+  right: 7rem;
+  font-size: 2rem;
+}
+
+.concept__mainCaptionPart__caption {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 3/5;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  width: 90%;
+  margin: auto 0 auto 3rem;
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+
+.concept__subCaption__titlePart {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  grid-row: 2/6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  position: relative;
+}
+
+.concept__subCaption__titlePart__title, .concept__subCaption__titlePart__subtitle {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-family: "fuga", serif;
+}
+
+.concept__subCaption__titlePart__title {
+  position: absolute;
+  top: 1.5rem;
+  right: 10rem;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.concept__subCaption__titlePart__subtitle {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.concept__subCaption__captionPart {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  grid-row: 4/6;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 1/3;
+  width: 80%;
+  margin: auto;
+}
+
+.concept__subCaption__captionPart__caption {
+  width: 80%;
+  margin: 2rem auto;
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+
+.footer {
+  width: 100vw;
+  height: 150px;
+  background-color: #133f5f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ccc;
+  position: relative;
+}
+
+.footer__logo {
+  font-size: 1.8rem;
+  font-family: "fuga", serif;
+}
+
+.footer__copyRight {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 3rem;
+}
+/*# sourceMappingURL=style.css.map */
