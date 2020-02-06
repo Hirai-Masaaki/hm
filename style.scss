@@ -1,0 +1,262 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #eaeaea;
+}
+
+@font-face {
+  font-family: "fuga";
+  src: url("fonts/TA_fuga_fude_03_m.otf");
+  font-weight: bold;
+}
+
+.heroImage {
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 200px;
+  display: grid;
+  grid-template-rows: 10vh 10vh 10vh 10vh 20vh 20vh 20vh;
+  grid-template-columns: 40vw 10vw 10vw 35vw 5vw;
+  &__header {
+    grid-row: 1/4;
+    grid-column: 1/6;
+    background-color: #133f5f;
+  }
+  &__titlePart {
+    grid-row: 2/6;
+    grid-column: 3/5;
+    background-color: #fff;
+    font-family: "fuga", serif;
+    font-weight: bold;
+    position: relative;
+    &__title,
+    &__subtitle {
+      writing-mode: vertical-rl;
+      margin: 0;
+    }
+    &__title {
+      font-size: 3rem;
+      position: absolute;
+      right: 5rem;
+      top: 2rem;
+    }
+    &__subtitle {
+      font-size: 1.5rem;
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+    }
+  }
+  &__snsPart {
+    grid-row: 6/8;
+    grid-column: 4/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__inner {
+      width: 80%;
+      height: 90%;
+      background-color: #274a78;
+      transform: translateY(5rem);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &__line,
+      &__twitter,
+      &__map {
+        i {
+          color: #fff;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  &__pictureWrapper {
+    grid-row: 3/7;
+    grid-column: 2/4;
+    z-index: 100;
+    &__picture {
+      height: 50%;
+      background-size: cover;
+      background-position: center;
+      &:nth-child(1) {
+        background-image: url("images/heroImage1.jpg");
+      }
+      &:nth-child(2) {
+        background-image: url("images/heroImage2.jpg");
+      }
+    }
+  }
+  &__captionWrapper {
+    grid-row: 4/8;
+    grid-column: 1/2;
+    &__titlePart {
+      position: relative;
+      font-family: "fuga", serif;
+      height: 70%;
+      &__title,
+      &__subtitle {
+        writing-mode: vertical-rl;
+        margin: 0;
+      }
+      &__title {
+        font-size: 2.5rem;
+        position: absolute;
+        left: 3rem;
+        top: 2rem;
+      }
+      &__subtitle {
+        font-size: 1.5rem;
+        position: absolute;
+        left: 10rem;
+        top: 2rem;
+      }
+    }
+    &__caption {
+      height: 30%;
+      width: 70%;
+      margin: auto;
+      font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS P明朝",
+        "MS PMincho", serif;
+    }
+  }
+}
+
+.concept {
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 200px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1.5fr 0.5fr;
+  &__picture {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(1, 1, 1, 0.3);
+    }
+    &:nth-child(1) {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      background-image: url("images/concept1.jpg");
+    }
+    &:nth-child(2) {
+      grid-row: 2/4;
+      grid-column: 2/3;
+      background-image: url("images/concept2.jpg");
+    }
+    &:nth-child(3) {
+      grid-row: 1/3;
+      grid-column: 3/4;
+      background-image: url("images/concept3.jpg");
+    }
+    &:nth-child(4) {
+      grid-row: 3/4;
+      grid-column: 3/4;
+      background-image: url("images/concept4.jpg");
+    }
+    &:nth-child(5) {
+      grid-row: 5/6;
+      grid-column: 3/4;
+      background-image: url("images/concept5.jpg");
+    }
+    &:nth-child(6) {
+      grid-row: 5/6;
+      grid-column: 5/6;
+      background-image: url("images/concept6.jpg");
+      transform: translate(-50px);
+    }
+  }
+  &__mainCaptionPart {
+    grid-row: 1/4;
+    grid-column: 4/5;
+    &__titlePart {
+      position: relative;
+      width: 100%;
+      height: 80%;
+      &__title,
+      &__subtitle {
+        font-family: "fuga", serif;
+        writing-mode: vertical-rl;
+        margin: 0;
+      }
+      &__title {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 3rem;
+      }
+      &__subtitle {
+        position: absolute;
+        top: 1rem;
+        right: 7rem;
+        font-size: 2rem;
+      }
+    }
+    &__caption {
+      width: 90%;
+      margin-top: 2rem;
+      margin-left: 3rem;
+      font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS P明朝",
+        "MS PMincho", serif;
+    }
+  }
+  &__subCaption__titlePart {
+    grid-row: 2/6;
+    grid-column: 1/2;
+    position: relative;
+    &__title,
+    &__subtitle {
+      writing-mode: vertical-rl;
+      font-family: "fuga", serif;
+    }
+    &__title {
+      position: absolute;
+      top: 1.5rem;
+      right: 10rem;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    &__subtitle {
+      position: absolute;
+      top: 1.5rem;
+      right: 2.5rem;
+      font-size: 1.5rem;
+    }
+  }
+  &__subCaption__captionPart {
+    grid-row: 4/6;
+    grid-column: 1/3;
+    &__caption {
+      width: 80%;
+      margin: 2rem auto;
+      font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS P明朝",
+        "MS PMincho", serif;
+    }
+  }
+}
+
+.footer {
+  width: 100vw;
+  height: 150px;
+  background-color: #133f5f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+  position: relative;
+  &__logo {
+    font-size: 1.8rem;
+    font-family: "fuga", serif;
+  }
+  &__copyRight {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 3rem;
+  }
+}
